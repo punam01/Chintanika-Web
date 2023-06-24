@@ -25,6 +25,7 @@ function App() {
     },1500);
   }
   const [content, setContent] = useState("");
+  console.log(content);
   return (
     <>
       <ArticleState>

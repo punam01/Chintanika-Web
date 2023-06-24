@@ -6,6 +6,7 @@ import { useState } from "react";
 function Navbar(props) {
   let navigate = useNavigate();
   const [image, setImage] = useState("");
+  setImage("");
   //setImage(localStorage.getItem("image"));
   //useLocation to get current working component
   let location = useLocation();

@@ -5,7 +5,7 @@ function Signup(props) {
   let navigate = useNavigate();
 
   const [image, setImage] = useState("");
-
+  console.log(image);
   const convertToBase64 = (e) => {
     var reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);

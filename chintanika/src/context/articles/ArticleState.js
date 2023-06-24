@@ -54,7 +54,7 @@ const ArticleState = (props) => {
   //DELETE ARTICLE (takes article id)
   const delArticle = async (id) => {
     //TODO:API CALL
-
+    
     const response = await fetch(`${host}/api/article/deletearticle/${id}`, {
       method: "DELETE",
       headers: {
@@ -63,6 +63,7 @@ const ArticleState = (props) => {
       },
     });
     const json = response.json();
+    console.log(json);
     setTimeout(() => {
     }, 1000);
     const newArticle = articles.filter((article) => {
@@ -82,6 +83,7 @@ const ArticleState = (props) => {
       body: JSON.stringify({ title, description, content, tag }),
     });
     const json = await response.json();
+    console.log(json);
     let newArticle = JSON.parse(JSON.stringify(articles));
     for (let index = 0; index < newArticle.length; index++) {
       const element = articles[index];
@@ -108,6 +110,7 @@ const updateViewCounts = async (id) => {
     });
 
     const json = await response.json();
+    console.log(json);
   } catch (error) {
     console.error(error);
   }
@@ -124,6 +127,7 @@ const updateLikeCounts = async (id) => {
     });
 
     const json = await response.json();
+    console.log(json);
   } catch (error) {
     console.error(error);
   }
